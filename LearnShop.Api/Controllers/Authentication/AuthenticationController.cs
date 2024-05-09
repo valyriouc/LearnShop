@@ -21,6 +21,7 @@ public class AuthenticationController : ControllerBase
     public async Task LoginAsync([FromBody] UserData payload)
     {
         await HttpContext.SignInAsync(BearerTokenDefaults.AuthenticationScheme, CreatePrincipal());
+
     }
 
     [HttpPost("register")]
