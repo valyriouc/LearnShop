@@ -1,6 +1,6 @@
 ﻿namespace LearnShop.Api.DataTransfer.Auth;
 
-public class LoginData
+public class UserData
 {
     public string Username { get; set; }
 

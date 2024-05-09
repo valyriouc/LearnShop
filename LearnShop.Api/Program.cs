@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.BearerToken;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,8 +10,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services
-    .AddAuthentication()
-    .AddBearerToken();
+    .AddAuthentication(option =>
+    {
+        option.RequireAuthenticatedSignIn = false;
+    })
+    .AddBearerToken(BearerTokenDefaults.AuthenticationScheme, options =>
+    {
+       
+    });
 
 var app = builder.Build();
 
