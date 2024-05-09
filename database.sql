@@ -5,7 +5,7 @@ USE learnshop;
 CREATE TABLE addresses(
     addressId INT PRIMARY KEY AUTOINCREMENT,
     street TEXT NOT NULL,
-    addressNumber INT NOT NULL,
+    houseNumber INT NOT NULL,
     zipCode INT NOT NULL,
     city TEXT NOT NULL
 );
@@ -20,6 +20,7 @@ CREATE TABLE persons(
 CREATE TABLE paymentMethods(
     pmId INT PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
+    personId INT REFERENCES persons(personId)
 );
 
 CREATE TABLE accounts(
