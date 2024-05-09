@@ -34,7 +34,7 @@ CREATE TABLE products(
     productId INT PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(150) NOT NULL,
     description TEXT,
-    imageUrl TEXT NOT NULL,
+    imageUrl TEXT,
     price INT NOT NULL,
     amout INT NOT NULL,
     personId INT REFERENCES persons(personId)
