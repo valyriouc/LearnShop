@@ -16,7 +16,7 @@ builder.Services
     })
     .AddBearerToken(BearerTokenDefaults.AuthenticationScheme, options =>
     {
-       
+        
     });
 
 var app = builder.Build();
