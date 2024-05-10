@@ -1,3 +1,4 @@
+using LearnShop.Api.Database;
 using Microsoft.AspNetCore.Authentication.BearerToken;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,8 @@ builder.Services
     {
         
     });
+
+builder.Services.AddScoped<DatabaseContext>();
 
 var app = builder.Build();
 
